@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# create_remotes
+# File ID: 8a64e810-7d19-11df-b25f-00219bfade9b
+
+git remote add upstream git://ctrl.tukaani.org/xz.git
+git remote add github git@github.com:sunny256/xz.git
+git remote add sunbase sunny@git.sunbase.org:/home/sunny/Git-other/xz.git
+
+git remote -v | grep ^origin | grep -q git@github.com:sunny256/xz && git remote rm origin
